@@ -19,11 +19,32 @@
 // 254 => 5^4 = 625
 // 617 => 1
 
+// int number = 925;
+// int seсondDigit = number / 10 % 10; // 947 / 10 % 10 = 94 % 10 = 4
+// int thirdDigit = number % 10; // 947 % 10 = 7
+// // Math.Pow(5, 2) => 5^2 = 5*5=25
+// int result = (int)Math.Pow(seсondDigit, thirdDigit);
+// // Результат переводится в (int)
+// Console.WriteLine($"{seсondDigit} ^ {thirdDigit} = {result}");
+// // 4 ^ 7 =
+
+// Напишите программу, которая выводит третью с конца
+// цифру заданного числа или сообщает, что третьей цифры
+// нет.
+// Получить третью цифру заданного числа или сообщает, что третьей цифры
+// нет.
+// 456 => 4
+// 7812 => 8
+// 91 => Третьей цифры нет
+
 int number = 925;
-int seсondDigit = number / 10 % 10; // 947 / 10 % 10 = 94 % 10 = 4
-int thirdDigit = number % 10; // 947 % 10 = 7
-// Math.Pow(5, 2) => 5^2 = 5*5=25
-int result = (int)Math.Pow(seсondDigit, thirdDigit);
-// Результат переводится в (int)
-Console.WriteLine($"{seсondDigit} ^ {thirdDigit} = {result}");
-// 4 ^ 7 =
+if (number >= 100) // Число минимум трехзначное
+// От 100 до + бесконечности
+{
+    int thirdDigitFromEnd = (number / 100) % 10;
+    Console.WriteLine($"Третья цифра от {number} с конца: {thirdDigitFromEnd}");
+}
+else // В числе нет 3 цифры
+{
+    Console.WriteLine("Третьей цифры нет");
+}
